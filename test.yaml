@@ -1,0 +1,29 @@
+swagger: '2.0'
+info:
+    title: Coupon Model
+    description: 쿠폰 도메인 내 사용 모델
+    version: 0.0.1
+definitions:
+  CouponMaster:
+    type: object
+    properties:
+      id:
+        type: string
+        description: 아이디
+        maxLength: 64
+        example: ASDF7483AETYGRNSDF937
+      name:
+        type: string
+        description: 상품명
+        maxLength: 128
+        example: 2017 헤드리스 원키리턴 미니드론 KOOME K700
+      displayCategory:
+        type: string
+        description: 전시카테고리
+        maxLength: 64
+        example: 10002000300040005000
+      manageCategory:
+        type: string
+        description: 관리카테고리
+        maxLength: 64
+        example: 10002000300040005000
