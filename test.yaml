@@ -7,23 +7,56 @@ definitions:
   CouponMaster:
     type: object
     properties:
-      id:
+      siteId:
         type: string
-        description: 아이디
+        description: 사이트ID
         maxLength: 64
-        example: ASDF7483AETYGRNSDF937
+        example: LFM
+      couponId:
+        type: string
+        description: 쿠폰ID
+        maxLength: 64
+        example: 1234567890
       name:
         type: string
-        description: 상품명
+        description: 쿠폰명
         maxLength: 128
-        example: 2017 헤드리스 원키리턴 미니드론 KOOME K700
-      displayCategory:
+        example: [정상] 5%
+      discountType:
         type: string
-        description: 전시카테고리
+        description: 할인유형(정액/정률)
         maxLength: 64
-        example: 10002000300040005000
-      manageCategory:
+        example: A(amount) / R(rate)
+      discountAmount:
+        type: int
+        description: 할인값(할인금액/할인율 등)
+        maxLength: 64
+        example: 10000, 15(%)
+      minimumTargetAmount:
+        type: int
+        description: 최소판매가
+        maxLength: 64
+        example: 10000
+      maximumTargetAmount:
+        type: int
+        description: 최대할인양
+        maxLength: 64
+        example: 100000, 60(%)
+      expirationDateType:
         type: string
-        description: 관리카테고리
-        maxLength: 64
-        example: 10002000300040005000
+        description: 유효기간유형(기간, 일수)
+        maxLength: 1
+        example: P(기간), D(일수)
+      expirationDateAmount:
+        type: int
+        description: 유효기간일수(유효기간유형이 D(일수)인 경우)
+        maxLength: 999
+        example: 14
+      expirationStartDate:
+        type: date
+        description: 유효기간 시작일시
+        example: 2017-07-01 00:00:00
+      expirationDateAmount:
+        type: int
+        description: 유효기간 종료일시
+        example: 2017-07-31 23:59:59
