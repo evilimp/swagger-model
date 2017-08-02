@@ -25,20 +25,20 @@ definitions:
       discountType:
         type: string
         description: 할인유형(정액/정률)
-        maxLength: 64
+        maxLength: 1
         example: A(amount) / R(rate)
       discountAmount:
-        type: int
+        type: integer
         description: 할인값(할인금액/할인율 등)
         maxLength: 64
         example: 10000, 15(%)
       minimumTargetAmount:
-        type: int
+        type: integer
         description: 최소판매가
         maxLength: 64
         example: 10000
       maximumTargetAmount:
-        type: int
+        type: integer
         description: 최대할인양
         maxLength: 64
         example: 100000, 60(%)
@@ -48,7 +48,7 @@ definitions:
         maxLength: 1
         example: P(기간), D(일수)
       expirationDateAmount:
-        type: int
+        type: integer
         description: 유효기간일수(유효기간유형이 D(일수)인 경우)
         maxLength: 999
         example: 14
@@ -56,7 +56,7 @@ definitions:
         type: date
         description: 유효기간 시작일시
         example: 2017-07-01 00:00:00
-      expirationDateAmount:
-        type: int
+      expirationEndDate:
+        type: date
         description: 유효기간 종료일시
         example: 2017-07-31 23:59:59
