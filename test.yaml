@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
-    title: Coupon Model
-    description: 쿠폰 도메인 내 사용 모델
+    title: "Coupon Model"
+    description: "쿠폰 도메인 내 사용 모델"
     version: 0.0.1
 definitions:
   CouponMaster:
@@ -9,54 +9,51 @@ definitions:
     properties:
       siteId:
         type: string
-        description: 사이트ID
+        description: "사이트ID"
         maxLength: 64
-        example: LFM
+        example: "LFM"
       couponId:
         type: string
-        description: 쿠폰ID
+        description: "쿠폰ID"
         maxLength: 64
-        example: 1234567890
-      name:
+        example: "1234567890"
+      couponName:
         type: string
-        description: 쿠폰명
+        description: "쿠폰명"
         maxLength: 128
-        example: [정상] 5%
+        example: "[정상] 5%"
       discountType:
         type: string
-        description: 할인유형(정액/정률)
+        description: "할인유형(정액/정률)"
         maxLength: 1
-        example: A(amount) / R(rate)
+        example: "A(amount) / R(rate)"
       discountAmount:
         type: integer
-        description: 할인값(할인금액/할인율 등)
-        maxLength: 64
-        example: 10000, 15(%)
+        description: "할인값(할인금액/할인율 등)"
+        example: "10000(금액), 15(율)"
       minimumTargetAmount:
         type: integer
-        description: 최소판매가
-        maxLength: 64
-        example: 10000
+        description: "최소판매가"
+        example: "10000"
       maximumTargetAmount:
         type: integer
-        description: 최대할인양
-        maxLength: 64
-        example: 100000, 60(%)
+        description: "최대할인양"
+        example: "100000, 60(%)"
       expirationDateType:
         type: string
-        description: 유효기간유형(기간, 일수)
+        description: "유효기간유형(기간, 일수)"
         maxLength: 1
-        example: P(기간), D(일수)
+        example: "P(기간), D(일수)"
       expirationDateAmount:
         type: integer
-        description: 유효기간일수(유효기간유형이 D(일수)인 경우)
+        description: "유효기간일수(유효기간유형이 D(일수)인 경우)"
         maxLength: 999
-        example: 14
+        example: "14"
       expirationStartDate:
-        type: date
-        description: 유효기간 시작일시
-        example: 2017-07-01 00:00:00
+        type: object
+        description: "유효기간 시작일시"
+        example: "2017-07-01 00:00:00"
       expirationEndDate:
-        type: date
-        description: 유효기간 종료일시
-        example: 2017-07-31 23:59:59
+        type: object
+        description: "유효기간 종료일시"
+        example: "2017-07-31 23:59:59"
