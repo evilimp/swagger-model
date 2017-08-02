@@ -50,10 +50,12 @@ definitions:
         maxLength: 999
         example: "14"
       expirationStartDate:
-        type: object
+        type: string
+        format: date
         description: "유효기간 시작일시"
         example: "2017-07-01 00:00:00"
       expirationEndDate:
-        type: object
+        type: string
+        format: date
         description: "유효기간 종료일시"
         example: "2017-07-31 23:59:59"
